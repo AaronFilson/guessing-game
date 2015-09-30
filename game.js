@@ -88,5 +88,5 @@ alert('Thanks for playing my game, ' + username +
   '. The results are ... \n  Q1: ' + textFeedbackq1 + '\n Q2: '
   + textFeedbackq2 + '\n Q3: ' + textFeedbackq3 + ' \n \nPlease reload to play again.'
   );
-
+//Hope you enjoyed my layout. C++ is a style that I will have to set aside.
 //EOF
