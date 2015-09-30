@@ -26,15 +26,15 @@ qu2 = qu2.toUpperCase();
 qu3 = qu3.toUpperCase();
 
 
-if ((qu1=='yes') || (qu1=='y') || (qu1=='Yes') || (qu1=='Y'))
+if ((qu1=='YES') || (qu1=='Y'))
    {resQ1=true;}
  else
   {resQ1=false;};
-if ((qu2=='no')||(qu2=='n')||(qu2=='No')||(qu2=='N'))
+if ((qu2=='NO')||(qu2=='N'))
     {resQ2=true;}
   else
     {resQ2=false;};
-if ((qu3=='yes')||(qu3=='y')||(qu3=='Yes')||(qu3=='Y'))
+if ((qu3=='YES')||(qu3=='Y'))
   {resQ3=true;}
   else
     {resQ3=false;};
