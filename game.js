@@ -8,13 +8,14 @@
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
-
+var intro = document.getElementById('intro');
+var summary = document.getElementById('summary');
 
 var username;
 
 var qu1;
 var qu2;
-var qu3;
+var qu3;  
 
 var resQ1 = true;
 var resQ2 = true;
@@ -32,13 +33,13 @@ function qu1(){
   console.log('User entered ' + qu1 + ' for qu1 variable.');
   qu1 = qu1.toUpperCase();
 
-  if ((qu1=='YES') || (qu1=='Y')) {
-    resQ1=true;
+  if ((qu1 == 'YES') || (qu1 == 'Y')) {
+    resQ1 = true;
     one.innerHTML = 'Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.';
     countingRightAnswers++;
   } else {
-    resQ1=false;
-    one.innerHTML= 'No, that is not correct ' + username + ', I do have a Minor in English, from UPS.';
+    resQ1 = false;
+    one.innerHTML = 'No, that is not correct ' + username + ', I do have a Minor in English, from UPS.';
   }
 }
 
@@ -48,32 +49,31 @@ function qu2(){
   console.log('User entered ' + qu2 + ' for qu2 variable.');
   qu2 = qu2.toUpperCase();
 
-  if ((qu2=='NO')||(qu2=='N')) {
-    resQ2=true;
-    two.innerHTML ='Yes, that is correct ' + username +
+  if ((qu2 == 'NO')||(qu2 == 'N')) {
+    resQ2 = true;
+    two.innerHTML = 'Yes, that is correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
     countingRightAnswers++;
   } else {
-    resQ2=false;
-    two.innerHTML= 'No, that is not correct ' + username +
+    resQ2 = false;
+    two.innerHTML = 'No, that is not correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
   }
 
 }
-
-function qu3 (){
   //Question 3
+function qu3 (){
   qu3 = prompt('Did I grow up in Auburn? Please answer yes or no.');
   console.log('User entered ' + qu3 + ' for qu3 variable.');
   qu3 = qu3.toUpperCase();
 
-  if ((qu3=='YES')||(qu3=='Y')) {
-    resQ3=true;
-    three.innerHTML ='Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
+  if (qu3 == 'YES' || qu3 == 'Y') {
+    resQ3 = true;
+    three.innerHTML = 'Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
     countingRightAnswers++;
   } else {
-    resQ3=false;
-    three.innerHTML= 'No, that is not correct ' + username +
+    resQ3 = false;
+    three.innerHTML = 'No, that is not correct ' + username +
     ', I grew up in Auburn and graduated from AHS in 1997.';
   }
 }
@@ -82,15 +82,12 @@ function qu3 (){
 //Get user's name via prompt and store in username variable.
 username = prompt('What is your name?');
 console.log('User entered ' + username + ' as their user name.');
-alert('Nice to meet you ' + username + '! \n Do you like guessing games? I guess you do...');
+intro.innerHTML ='Nice to meet you ' + username + '! \n Do you like guessing games? I guess you do...';
 
-
+//Calling the qu1 functions
 qu1();
 qu2();
 qu3();
-
-
-
 
 //Logic section, resQ1 etc are initialized to Incorrect.
 console.log('logic results: ' + resQ1 + ', ' + resQ2 + ', ' + resQ3);
@@ -106,9 +103,9 @@ if (resQ3) {
 }
 
 //Summary display for user
-alert('Thanks for playing my game, ' + username +
+summary.innerHTML = 'Thanks for playing my game, ' + username +
   '. The results are ... \n\nQ1: ' + textFeedbackq1 + '\nQ2: '
   + textFeedbackq2 + '\nQ3: ' + textFeedbackq3 +
   '\n\nYou got ' + countingRightAnswers + ' of 3 answers right! ' +
-  '\n\nPlease reload to play again.');
+  '\n\nPlease reload to play again.';
 //EOF
