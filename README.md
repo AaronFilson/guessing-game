@@ -1,4 +1,8 @@
-<!-- Readme file for the Guessing Game assignment for B34 day 3. -->
+Driver Shruti Arora
+Navigator : Aaron Filson
+
+1 October
+
 This program runs a simple guessing game with feedback. It has three questions, including individual question feedback. The game can be re-run by reloading the index.html webpage.
 
   There is limited error correction for user input. At the end the user is presented with a summary.
