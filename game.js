@@ -4,6 +4,8 @@
 //September 30th, 2015
 
 //Declaring variables
+
+
 var username;
 
 var qu1;
@@ -20,17 +22,9 @@ var textFeedbackq3 = 'Incorrect';
 
 var countingRightAnswers = 0;
 
-//end of variables declaration
-
-//Get user's name via prompt and store in username variable.
-username = prompt('What is your name?');
-
-console.log('User entered ' + username + ' as their user name.');
-
-alert('Nice to meet you ' + username + '! \n Do you like guessing games? I guess you do...');
-
 //Question 1
-qu1 = prompt('Do I have a Minor in English? Please answer yes or no.');
+function qu1(){
+  qu1 = prompt('Do I have a Minor in English? Please answer yes or no.');
 console.log('User entered ' + qu1 + ' for qu1 variable.');
 qu1 = qu1.toUpperCase();
 
@@ -42,9 +36,11 @@ if ((qu1=='YES') || (qu1=='Y')) {
   resQ1=false;
   alert('No, that is not correct ' + username + ', I do have a Minor in English, from UPS.');
 }
+}
 
 //Question 2
-qu2 = prompt('Am I a football player? Please answer yes or no.');
+function qu2(){
+  qu2 = prompt('Am I a football player? Please answer yes or no.');
 console.log('User entered ' + qu2 + ' for qu2 variable.');
 qu2 = qu2.toUpperCase();
 
@@ -59,7 +55,10 @@ if ((qu2=='NO')||(qu2=='N')) {
   ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!');
 }
 
-//Question 3
+}
+
+function qu3 (){
+  //Question 3
 qu3 = prompt('Did I grow up in Auburn? Please answer yes or no.');
 console.log('User entered ' + qu3 + ' for qu3 variable.');
 qu3 = qu3.toUpperCase();
@@ -73,6 +72,21 @@ if ((qu3=='YES')||(qu3=='Y')) {
   alert('No, that is not correct ' + username +
   ', I grew up in Auburn and graduated from AHS in 1997.');
 }
+}
+
+//end of variables declaration
+//Get user's name via prompt and store in username variable.
+username = prompt('What is your name?');
+console.log('User entered ' + username + ' as their user name.');
+alert('Nice to meet you ' + username + '! \n Do you like guessing games? I guess you do...');
+
+
+qu1();
+qu2();
+qu3();
+
+
+
 
 //Logic section, resQ1 etc are initialized to Incorrect.
 console.log('logic results: ' + resQ1 + ', ' + resQ2 + ', ' + resQ3);
