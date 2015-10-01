@@ -5,6 +5,10 @@
 
 //Declaring variables
 
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+
 
 var username;
 
@@ -25,53 +29,53 @@ var countingRightAnswers = 0;
 //Question 1
 function qu1(){
   qu1 = prompt('Do I have a Minor in English? Please answer yes or no.');
-console.log('User entered ' + qu1 + ' for qu1 variable.');
-qu1 = qu1.toUpperCase();
+  console.log('User entered ' + qu1 + ' for qu1 variable.');
+  qu1 = qu1.toUpperCase();
 
-if ((qu1=='YES') || (qu1=='Y')) {
-  resQ1=true;
-  alert('Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.');
-  countingRightAnswers++;
-} else {
-  resQ1=false;
-  alert('No, that is not correct ' + username + ', I do have a Minor in English, from UPS.');
-}
+  if ((qu1=='YES') || (qu1=='Y')) {
+    resQ1=true;
+    one.innerHTML = 'Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.';
+    countingRightAnswers++;
+  } else {
+    resQ1=false;
+    one.innerHTML= 'No, that is not correct ' + username + ', I do have a Minor in English, from UPS.';
+  }
 }
 
 //Question 2
 function qu2(){
   qu2 = prompt('Am I a football player? Please answer yes or no.');
-console.log('User entered ' + qu2 + ' for qu2 variable.');
-qu2 = qu2.toUpperCase();
+  console.log('User entered ' + qu2 + ' for qu2 variable.');
+  qu2 = qu2.toUpperCase();
 
-if ((qu2=='NO')||(qu2=='N')) {
-  resQ2=true;
-  alert('Yes, that is correct ' + username +
-  ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!');
-  countingRightAnswers++;
-} else {
-  resQ2=false;
-  alert('No, that is not correct ' + username +
-  ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!');
-}
+  if ((qu2=='NO')||(qu2=='N')) {
+    resQ2=true;
+    two.innerHTML ='Yes, that is correct ' + username +
+    ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
+    countingRightAnswers++;
+  } else {
+    resQ2=false;
+    two.innerHTML= 'No, that is not correct ' + username +
+    ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
+  }
 
 }
 
 function qu3 (){
   //Question 3
-qu3 = prompt('Did I grow up in Auburn? Please answer yes or no.');
-console.log('User entered ' + qu3 + ' for qu3 variable.');
-qu3 = qu3.toUpperCase();
+  qu3 = prompt('Did I grow up in Auburn? Please answer yes or no.');
+  console.log('User entered ' + qu3 + ' for qu3 variable.');
+  qu3 = qu3.toUpperCase();
 
-if ((qu3=='YES')||(qu3=='Y')) {
-  resQ3=true;
-  alert('Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.');
-  countingRightAnswers++;
-} else {
-  resQ3=false;
-  alert('No, that is not correct ' + username +
-  ', I grew up in Auburn and graduated from AHS in 1997.');
-}
+  if ((qu3=='YES')||(qu3=='Y')) {
+    resQ3=true;
+    three.innerHTML ='Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
+    countingRightAnswers++;
+  } else {
+    resQ3=false;
+    three.innerHTML= 'No, that is not correct ' + username +
+    ', I grew up in Auburn and graduated from AHS in 1997.';
+  }
 }
 
 //end of variables declaration
