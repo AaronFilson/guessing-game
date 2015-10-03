@@ -1,7 +1,7 @@
 //game.js
 //Written by Aaron Filson, aaronfilson@gmail.com
-//Day 3 lab assignment for B34 Bootcamp at Code Fellows Seattle
-//September 30th, 2015
+//Day 5 lab assignment for B34 Bootcamp at Code Fellows Seattle
+//October 2nd, 2015
 
 //Declaring variables
 
@@ -27,13 +27,16 @@ var textFeedbackq3 = 'Incorrect';
 
 var countingRightAnswers = 0;
 
+var promptText = new Array('Do I have a Minor in English? Please answer yes or no.', 'Am I a football player? Please answer yes or no.', 'Did I grow up in Auburn? Please answer yes or no.' );
+var answerString = new Array('YES', 'Y', 'NO', 'N');
+
 //Question 1
 function qu1(){
-  qu1 = prompt('Do I have a Minor in English? Please answer yes or no.');
+  qu1 = prompt(promptText[0]);
   console.log('User entered ' + qu1 + ' for qu1 variable.');
   qu1 = qu1.toUpperCase();
 
-  if ((qu1 == 'YES') || (qu1 == 'Y')) {
+  if ((qu1 == answerString[0]) || (qu1 == answerString[1])) {
     resQ1 = true;
     one.innerHTML = 'Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.';
     countingRightAnswers++;
@@ -45,11 +48,11 @@ function qu1(){
 
 //Question 2
 function qu2(){
-  qu2 = prompt('Am I a football player? Please answer yes or no.');
+  qu2 = prompt(promptText[1]);
   console.log('User entered ' + qu2 + ' for qu2 variable.');
   qu2 = qu2.toUpperCase();
 
-  if ((qu2 == 'NO')||(qu2 == 'N')) {
+  if ((qu2 == answerString[2])||(qu2 == answerString[3])) {
     resQ2 = true;
     two.innerHTML = 'Yes, that is correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
@@ -63,11 +66,11 @@ function qu2(){
 }
   //Question 3
 function qu3 (){
-  qu3 = prompt('Did I grow up in Auburn? Please answer yes or no.');
+  qu3 = prompt(promptText[2]);
   console.log('User entered ' + qu3 + ' for qu3 variable.');
   qu3 = qu3.toUpperCase();
 
-  if (qu3 == 'YES' || qu3 == 'Y') {
+  if (qu3 == answerString[0] || qu3 == answerString[1]) {
     resQ3 = true;
     three.innerHTML = 'Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
     countingRightAnswers++;
