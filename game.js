@@ -32,7 +32,7 @@ var countingRightAnswers = 0;
 
 var promptText = new Array('Do I have a Minor in English? Please answer yes or no.', 'Am I a football player? Please answer yes or no.', 'Did I grow up in Auburn? Please answer yes or no.' );
 var answerString = new Array('YES', 'Y', 'NO', 'N');
-var linkString = ' <img src = "img/cat_morgan.jpg" alt = "happy cat" title = "Good Job!" />'
+var linkString = '<img src = "img/cat_morgan.jpg" alt = "happy cat" title = "Good Job!" />'
 
 //Question 1
 function qu1(){
@@ -102,8 +102,8 @@ intro.innerHTML ='Nice to meet you ' + username + '! \n Do you like guessing gam
 
 //Calling the qu1 functions
 qu1();
-qu2();
-qu3();
+window.setTimeout(qu2, 1000);
+window.setTimeout(qu3, 1000);
 
 //Logic section, resQ1 etc are initialized to Incorrect.
 console.log('logic results: ' + resQ1 + ', ' + resQ2 + ', ' + resQ3);
