@@ -43,11 +43,13 @@ function qu1(){
   if ((qu1 == answerString[0]) || (qu1 == answerString[1])) {
     resQ1 = true;
     one.innerHTML = 'Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.';
+    one.className = 'correct';
     catPic1.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ1 = false;
     one.innerHTML = 'No, that is not correct ' + username + ', I do have a Minor in English, from UPS.';
+    one.className = 'incorrect';
   }
 }
 
@@ -61,12 +63,14 @@ function qu2(){
     resQ2 = true;
     two.innerHTML = 'Yes, that is correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
+    two.className = 'correct';
     catPic2.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ2 = false;
     two.innerHTML = 'No, that is not correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
+    two.className = 'incorrect';
   }
 
 }
@@ -79,12 +83,14 @@ function qu3 (){
   if (qu3 == answerString[0] || qu3 == answerString[1]) {
     resQ3 = true;
     three.innerHTML = 'Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
+    three.className = 'correct';
     catPic3.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ3 = false;
     three.innerHTML = 'No, that is not correct ' + username +
     ', I grew up in Auburn and graduated from AHS in 1997.';
+    three.className = 'incorrect';
   }
 }
 
