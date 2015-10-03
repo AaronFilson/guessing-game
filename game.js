@@ -10,6 +10,9 @@ var two = document.getElementById('two');
 var three = document.getElementById('three');
 var intro = document.getElementById('intro');
 var summary = document.getElementById('summary');
+var catPic1 = document.getElementById('catPic1');
+var catPic2 = document.getElementById('catPic2');
+var catPic3 = document.getElementById('catPic3');
 
 var username;
 
@@ -29,6 +32,7 @@ var countingRightAnswers = 0;
 
 var promptText = new Array('Do I have a Minor in English? Please answer yes or no.', 'Am I a football player? Please answer yes or no.', 'Did I grow up in Auburn? Please answer yes or no.' );
 var answerString = new Array('YES', 'Y', 'NO', 'N');
+var linkString = ' <img src = "img/cat_morgan.jpg" alt = "happy cat" title = "Good Job!" />'
 
 //Question 1
 function qu1(){
@@ -39,6 +43,7 @@ function qu1(){
   if ((qu1 == answerString[0]) || (qu1 == answerString[1])) {
     resQ1 = true;
     one.innerHTML = 'Yes, that is correct ' + username + ', I do have a Minor in English, from UPS.';
+    catPic1.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ1 = false;
@@ -56,6 +61,7 @@ function qu2(){
     resQ2 = true;
     two.innerHTML = 'Yes, that is correct ' + username +
     ', I do not play football. But I do cheer for the Hawks. GO SEAHAWKS!!';
+    catPic2.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ2 = false;
@@ -73,6 +79,7 @@ function qu3 (){
   if (qu3 == answerString[0] || qu3 == answerString[1]) {
     resQ3 = true;
     three.innerHTML = 'Yes, ' + username + ', I grew up in Auburn and graduated from AHS in 1997.';
+    catPic3.innerHTML = linkString;
     countingRightAnswers++;
   } else {
     resQ3 = false;
