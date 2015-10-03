@@ -1,0 +1,17 @@
+/*The css file for the guessing game project.*/
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+body {
+  background-color: #9999FF;
+}
+
+* {
+  font-family: Courier;
+}
